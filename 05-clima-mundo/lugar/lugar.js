@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const getLatitudLongitud = async (localizacion) => {
+const getCoordenadas = async (localizacion) => {
 
   const localizacionCodificada = encodeURI(localizacion);
 
@@ -23,11 +23,9 @@ const getLatitudLongitud = async (localizacion) => {
   const lon = resultado.lon;
 
   return {
-    lugar,
-    pais,
     lat,
     lon
   }
 }
 
-module.exports = { getLatitudLongitud }
+module.exports = { getCoordenadas }
