@@ -13,7 +13,7 @@ const getLatitudLongitud = async (localizacion) => {
   const resp = await instancia.get();
 
   if(resp.data.Results.length === 0)
-    throw new Error(`No se encontraron resultados para la localización ${localizacion}`);
+    throw new Error(`No se encontraron coordenadas para la localización ${localizacion}`);
 
   const resultado = resp.data.Results[0];
 
