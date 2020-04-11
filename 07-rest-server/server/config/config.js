@@ -20,3 +20,6 @@ process.env.SEED = (process.env.NODE_ENV === 'dev')?
 
 // Expire token
 process.env.TOKEN_EXPIRES = '10d'
+
+// Google clent id
+process.env.CLIENT_ID = process.env.CLIENT_ID || '931683885974-f1cl7859bgi6c88fhbes5jt8fm1ils1m.apps.googleusercontent.com';
