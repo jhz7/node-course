@@ -14,8 +14,8 @@ app.get('/usuario', verificaToken, (req, res) => {
 
   const condicion = {};
 
-  const pagina = req.query.pagina;
-  const registros = req.query.registros;
+  const pagina = req.query.pagina || 0;
+  const registros = req.query.registros || 50;
   const paginacion = getPaginacion(pagina, registros);
 
   Usuario.find(condicion, 'nombre email role img estado google')
